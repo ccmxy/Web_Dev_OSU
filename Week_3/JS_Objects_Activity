@@ -1,0 +1,67 @@
+function deepEqual(x, y){
+
+ //simple comparison of non-objects:
+
+if (x === y) return true;
+
+   //if either x or y is not an object:
+
+if (x == null || typeof x != "object" || y == null || typeof y != "object"){
+
+     return false;
+
+ }
+
+//make sure x and y property count is the same:
+
+var xPropCount = 0;
+
+var yPropCount = 0;
+
+for(var xProps in x){
+
+xPropCount += 1;
+
+}
+
+for(var yProps in y){
+
+yPropCount += 1;
+
+}
+
+if ( yPropCount != xPropCount){
+
+return false;
+
+}
+
+//go over properties in x and compare with props in y with recursive call:
+
+for (var property in x){
+
+if (!deepEqual(x[property], y[property])){
+
+return false;
+
+}
+
+return true;
+
+}
+
+};
+
+var obj = {here: {is: "an"}, object: 2};
+
+console.log(deepEqual(obj, obj));
+
+// → true
+
+console.log(deepEqual(obj, {here: 1, object: 2}));
+
+// → false
+
+console.log(deepEqual(obj, {here: {is: "an"}, object: 2}));
+
+// → true

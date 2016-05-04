@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Testing asynchronous calls to the web APIs openweathermap and httbin.com/post">
+    <meta name="author" content="Colleen Minor">
+    <TITLE>Web APIs</TITLE>
+</head>
+
+<body>
+    <form id="weatherForm">
+        <fieldset>
+            <legend>Choose a City to Learn the Weather of By Name or Zip Code</legend>
+            <label for="cityNameInput">City Name: </label>
+            <input type="text" name="cityNameInput" id="cityNameInput">
+            <label for="zipInput">Zipcode: </label>
+            <input type="text" name="zipInput" id="zipInput">
+            <input type="submit" id="citySubmit">
+        </fieldset>
+    </form>
+    <div id="weatherThings">
+        <p>
+            <span id="topLabel"></span>
+        </p>
+        <p id="temperature">
+            Temperature:
+        </p>
+        <p>
+            <span id="temperatureKelvin"></span><span id="kelvinSymbol"> &deg Kelvin</span>
+        </p>
+        <p>
+            <span id="temperatureFar"></span><span id="fahSymbol"> &deg Fahrenheit</span>
+        </p>
+        <p id="humidityLevel"> Humidity level: </p>
+        <p>
+            <span id="humidity"></span>
+        </p>
+        <br>
+    </div>
+
+    <form>
+        <fieldset>
+            <legend> Test http://httpbin.org/post:</legend>
+            <label for="httpbinInput">Enter JSON Data:</label>
+            <textarea name="httpbinInput" id="httpbinInput"></textarea>
+            <input type="submit" id="httpbinSubmit" />
+        </fieldset>
+    </form>
+
+    <p id="responseLabel">Response:</p>
+    <span id="httpbinResponse"></span>
+    <script src=./openWeatherScript.js></script>
+    <script src=./httpBin.js></script>
+</body>
+
+</html>

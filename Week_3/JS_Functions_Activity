@@ -1,0 +1,15 @@
+callMeEarly();
+
+function callMeEarly() {
+
+        console.log("I work!")
+
+};
+
+nonAssignedVariable();
+
+var nonAssignedVariable = function (){
+
+        console.log("You will never get to see this =(")
+
+};

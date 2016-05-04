@@ -1,0 +1,13 @@
+#responseLabel {
+    visibility: hidden;
+}
+#weatherThings {
+    visibility: hidden;
+}
+P {
+    text-align: center
+}
+textarea {
+    width: 400px;
+    height: 400px;
+}

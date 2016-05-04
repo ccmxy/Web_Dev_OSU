@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="testList()">testList();</button>
+
+<script>
+
+  var buildList = function(list){
+
+    var result = [];
+    for (var i = 0; i < list.length; i++) {
+
+     result[i] = function(x){
+
+        return function(){
+
+          var item = 'item' + list[x];
+          result.push( function() {alert(item + ' ' + list[x])} );
+
+        };
+      }(i);
+    }
+
+    return result;
+
+  }
+
+
+
+var testList = function() {
+
+  var fnlist = buildList([1,2,3]);
+  for (var j = 0; j < fnlist.length; j++) {
+
+    fnlist[j]();
+
+    }
+  }
+</script>
+
+</body>
+</html>
+
+
+
+
+
+// <![CDATA[ var buildList = function(list){ var result = []; for (var i = 0; i < list.length; i++) { result[i] = function(x){ return function(){ var item = 'item' + list[x]; result.push( function() {alert(item + ' ' + list[x])} ); }; }(i); } return result; } var testList = function() { var fnlist = buildList([1,2,3]); for (var j = 0; j < fnlist.length; j++) { fnlist[j](); } } // ]]>
