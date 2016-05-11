@@ -1,0 +1,53 @@
+<H1>{{method}} Request Received</H1>
+    <form action=
+    "http://52.38.127.124:3000/"
+    method="post">
+	<fieldset>
+	   <legend>Post Data Form</legend>
+        <p>Also try submitting data with the Advanced Rest Client!</p>
+	      Text input: <input name="text_input" type="text"><br>
+        Number input: <input name="numerical_input" type="text"><br>
+        Password input: <input name="password_input" type="text"><br>
+        <input checked name="candy" type="radio" value="snickers">Snickers<br>
+        <input name="candy" type="radio" value="skittles"> Skittles<br>
+        <input name="candy" type="radio" value="mentos"> Mentos<br>
+	       <p>Note: Data submitted through this form does not account for data that 	is currently in the URL</p>
+        <input type="submit" value="Submit">
+	     </fieldset>
+    </form>
+
+  <table>
+    <caption><p>Get Requests:</p></caption>
+    <thead>
+      <tr>
+        <th>Key</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+    {{#each queryParams}}
+      <tr>
+        <td>{{this.key}}</td>
+        <td>{{this.value}}</td>
+      </tr>
+    {{/each}}
+    </tbody>
+  </table>
+<hr>
+  <table>
+    <caption><p>Post Requests:</p></caption>
+    <thead>
+      <tr>
+        <th>Key</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+    {{#each bodyParams}}
+      <tr>
+        <td>{{this.key}}</td>
+        <td>{{this.value}}</td>
+      </tr>
+    {{/each}}
+    </tbody>
+  </table>

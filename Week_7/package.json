@@ -1,0 +1,18 @@
+{
+  "name": "Get-n-Post",
+  "version": "1.0.0",
+  "description": "a get and post data checker",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Colleen Minor",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "express-handlebars": "^2.0.1",
+    "express-session": "^1.13.0",
+    "mysql": "^2.8.0"
+  }
+}
