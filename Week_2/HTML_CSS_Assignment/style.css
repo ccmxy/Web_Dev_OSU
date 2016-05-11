@@ -1,0 +1,35 @@
+.column1 {
+    font-style: italic;
+    font-weight: 400;
+}
+
+.width-container {
+    width: 100%;
+    display: inline-block;
+}
+
+.outer-content {
+    width: 75%;
+    float: left;
+    background-color: #ffc0cb;
+    margin-top: 20px;
+    align-content: center;
+    display: inline-block;
+}
+
+.inner-content {
+    width: 75%;
+    margin: 0 auto;
+    background-color: #CCCCFF;
+		text-align: center;
+}
+
+tr:nth-of-type(even) {
+    background: green;
+}
+
+form{
+	border: 1px dotted #999;
+  border-radius: 0;
+	margin: 5px;
+}
